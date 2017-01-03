@@ -14,6 +14,9 @@
     "build": "next build",
     "start": "next start"
   },
+  "now": {
+    "alias:": "gorchichka.com"
+  },
   "devDependencies": {
     "standard": "^8.6.0"
   }
