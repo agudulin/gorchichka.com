@@ -4,17 +4,22 @@ import { getQuote } from 'gorchichka'
 const breakLines = (str) => str.split('\n').map(line => <div key={line}>{ line }</div>)
 
 class App extends Component {
-  static async getInitialProps () {
-    return Promise.resolve({
+  static getInitialProps () {
+    return {
       randomQuote: getQuote({ details: true })
-    })
+    }
   }
 
   render () {
     const { randomQuote } = this.props
+    const quoteLines = breakLines(randomQuote.quote)
+    const info = `${randomQuote.song}, ${randomQuote.album.title} (${randomQuote.album.year})`
 
     return (
-      <div>{ breakLines(randomQuote.quote) }</div>
+      <div>
+        <p>{ quoteLines }</p>
+        <p>{ info }</p>
+      </div>
     )
   }
 }
