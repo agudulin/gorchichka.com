@@ -1,0 +1,20 @@
+{
+  "name": "gorchichka.com",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Alexander Gudulin <alexandr.gudulin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gorchichka": "^0.1.2",
+    "next": "^1.2.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "lint": "standard",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
