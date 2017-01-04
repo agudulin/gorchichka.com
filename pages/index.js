@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { getQuote, getQuoteByIndex } from 'gorchichka'
 
+import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
 import Quote from '../components/quote'
-
-const quoteToIndex = (quote) => `${quote.album.index}-${quote.song.index}-${quote.quote.index}`
-const idToIndex = (id) => id.split('-').map(x => parseInt(x, 10))
 
 class App extends Component {
   static getInitialProps ({ query: { q: id } }) {
-    const index = id && idToIndex(id)
-    const currentQuote = id ? getQuoteByIndex(...index, { details: true }) : getQuote({ details: true })
-    const nextQuoteIndex = quoteToIndex(getQuote({ details: true }))
+    const currentQuote = id
+      ? getQuoteByIndex(...indexFromQuery(id), { details: true })
+      : getQuote({ details: true })
+    const nextQuote = getQuote({ details: true })
+    const nextQuoteIndex = indexFromQuote(nextQuote)
 
     return { currentQuote, nextQuoteIndex }
   }
