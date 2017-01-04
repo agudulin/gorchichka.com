@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/prefetch'
 
 const breakLines = (str) => str.split('\n').map(line => <div key={line}>{ line }</div>)
 
@@ -11,7 +12,7 @@ export default ({ currentQuote, nextQuoteIndex }) => {
     <div>
       <div>{ quoteLines }</div>
       <div>{ info }</div>
-      <a href={href}>еще</a>
+      <Link href={href}>еще</Link>
     </div>
   )
 }
