@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Head from 'next/head'
 import { getQuote, getQuoteByIndex } from 'gorchichka'
 
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
@@ -17,9 +18,18 @@ class App extends Component {
 
   render () {
     const { currentQuote, nextQuoteIndex } = this.props
+    const title = `горчичка - ${currentQuote.song.title}`
 
     return (
-      <Quote currentQuote={currentQuote} nextQuoteIndex={nextQuoteIndex} />
+      <div>
+        <Head>
+          <title>{ title }</title>
+          <meta charSet='utf-8' />
+          <meta content='initial-scale=1.0, width=device-width' name='viewport' />
+        </Head>
+
+        <Quote currentQuote={currentQuote} nextQuoteIndex={nextQuoteIndex} />
+      </div>
     )
   }
 }
