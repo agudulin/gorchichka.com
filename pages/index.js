@@ -1,25 +1,25 @@
 import React, { Component } from 'react'
-import { getQuote } from 'gorchichka'
+import { getQuote, getQuoteByIndex } from 'gorchichka'
 
-const breakLines = (str) => str.split('\n').map(line => <div key={line}>{ line }</div>)
+import Quote from '../components/quote'
+
+const quoteToIndex = (quote) => `${quote.album.index}-${quote.song.index}-${quote.quote.index}`
+const idToIndex = (id) => id.split('-').map(x => parseInt(x, 10))
 
 class App extends Component {
-  static getInitialProps () {
-    return {
-      randomQuote: getQuote({ details: true })
-    }
+  static getInitialProps ({ query: { q: id } }) {
+    const index = id && idToIndex(id)
+    const currentQuote = id ? getQuoteByIndex(...index, { details: true }) : getQuote({ details: true })
+    const nextQuoteIndex = quoteToIndex(getQuote({ details: true }))
+
+    return { currentQuote, nextQuoteIndex }
   }
 
   render () {
-    const { randomQuote } = this.props
-    const quoteLines = breakLines(randomQuote.quote)
-    const info = `${randomQuote.song}, ${randomQuote.album.title} (${randomQuote.album.year})`
+    const { currentQuote, nextQuoteIndex } = this.props
 
     return (
-      <div>
-        <p>{ quoteLines }</p>
-        <p>{ info }</p>
-      </div>
+      <Quote currentQuote={currentQuote} nextQuoteIndex={nextQuoteIndex} />
     )
   }
 }

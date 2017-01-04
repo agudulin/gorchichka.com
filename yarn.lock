@@ -1544,9 +1544,9 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-gorchichka@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/gorchichka/-/gorchichka-0.1.2.tgz#75ced1943834f22f21147a2efb412ac94116d7b8"
+gorchichka@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gorchichka/-/gorchichka-0.2.0.tgz#4d3241bcc821b3742fb8cceb893144f1d7302210"
 
 graceful-fs@^4.1.2:
   version "4.1.11"
