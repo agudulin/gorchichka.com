@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "next",
+    "deploy": "now && now alias",
     "lint": "standard",
     "build": "next build",
     "start": "next start"
