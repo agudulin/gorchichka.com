@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { getQuote, getQuoteByIndex } from 'gorchichka'
 
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
+import nextRandomQuote from '../lib/nextRandomQuote'
 import Links from '../components/links'
 import Content from '../components/content'
 import * as css from '../stylesheets'
@@ -22,7 +23,7 @@ class App extends Component {
     const currentQuote = id
       ? getQuoteByIndex(...indexFromQuery(id), { details: true })
       : getQuote({ details: true })
-    const nextQuote = getQuote({ details: true })
+    const nextQuote = nextRandomQuote(currentQuote)
     const nextQuoteIndex = indexFromQuote(nextQuote)
 
     return { currentQuote, nextQuoteIndex }
