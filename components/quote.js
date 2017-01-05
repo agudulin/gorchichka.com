@@ -1,18 +1,17 @@
 import React from 'react'
-import Link from 'next/prefetch'
 
 const breakLines = (str) => str.split('\n').map(line => <div key={line}>{ line }</div>)
+const style = `
+  .quote {
+    font-size: 2rem;
+    order: 2;
+    flex-grow: 2;
+  }
+`
 
-export default ({ currentQuote, nextQuoteIndex }) => {
-  const quoteLines = breakLines(currentQuote.quote.title)
-  const info = `${currentQuote.song.title}, ${currentQuote.album.title} (${currentQuote.album.year})`
-  const href = `/?q=${nextQuoteIndex}`
-
-  return (
-    <div>
-      <div>{ quoteLines }</div>
-      <div>{ info }</div>
-      <Link href={href}>еще</Link>
-    </div>
-  )
-}
+export default ({ quote }) => (
+  <div className='quote'>
+    { breakLines(quote.quote.title) }
+    <style>{ style }</style>
+  </div>
+)
