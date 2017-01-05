@@ -4,7 +4,7 @@ export default `
   :root {
     box-sizing: border-box;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
   }
   *, *:before, *:after {
     box-sizing: inherit;

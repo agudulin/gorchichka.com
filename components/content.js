@@ -7,9 +7,10 @@ import { colors } from '../stylesheets'
 const style = `
   .content {
     height: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 2rem 5rem;
     color: ${colors.grey};
   }
 `
