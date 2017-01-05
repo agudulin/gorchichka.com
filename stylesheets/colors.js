@@ -1,4 +1,5 @@
 export default {
   black: 'black',
-  grey: '#dcdcdc'
+  grey: '#dcdcdc',
+  gold: 'goldenrod'
 }

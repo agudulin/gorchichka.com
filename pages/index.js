@@ -39,6 +39,7 @@ class App extends Component {
           <title>{ title }</title>
           <meta charSet='utf-8' />
           <meta content='initial-scale=1.0, width=device-width' name='viewport' />
+          <link rel='stylesheet' type='text/css' href='/static/stylesheets/icomoon.css' />
         </Head>
 
         <Content currentQuote={currentQuote} />
