@@ -8,7 +8,7 @@ const style = `
   .links {
     position: absolute;
     bottom: 0;
-    height: 4rem;
+    height: 5rem;
     background-color: ${colors.grey};
     width: 100%;
     display: flex;
@@ -19,11 +19,13 @@ const style = `
 
   .links__item {
     padding: 1rem 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-decoration: none;
     color: ${colors.black};
     display: flex;
     align-items: center;
+    color: ${colors.darkGold};
+    transition: color .1s ease;
   }
   .links__item:hover {
     color: ${colors.gold};

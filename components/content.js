@@ -10,7 +10,7 @@ const style = `
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem 5rem;
+    padding: 2rem 2rem 6rem;
     color: ${colors.grey};
   }
 `

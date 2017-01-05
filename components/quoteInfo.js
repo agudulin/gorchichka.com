@@ -2,6 +2,7 @@ import React from 'react'
 
 const style = `
   .quote-info {
+    font-family: sans-serif;
     text-transform: uppercase;
     order: 1;
     flex-grow: 1;
@@ -14,11 +15,18 @@ const style = `
     font-weight: bold;
     margin-top: 2rem;
   }
+  .quote-info__year {
+    font-size: .8rem;
+    margin-left: .5rem;
+  }
 `
 
 export default ({ quote }) => (
   <div className='quote-info'>
-    <div className='quote-info__album'>Кровосток - { quote.album.title } { quote.album.year }</div>
+    <div className='quote-info__album'>
+      Кровосток · { quote.album.title }
+      <span className='quote-info__year'>{ quote.album.year }</span>
+    </div>
     <div className='quote-info__song'>{ quote.song.title }</div>
 
     <style>{ style }</style>

@@ -39,7 +39,8 @@ class App extends Component {
           <title>{ title }</title>
           <meta charSet='utf-8' />
           <meta content='initial-scale=1.0, width=device-width' name='viewport' />
-          <link rel='stylesheet' type='text/css' href='/static/stylesheets/icomoon.css' />
+          <link href='/static/stylesheets/icomoon.css' rel='stylesheet' />
+          <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=cyrillic' />
         </Head>
 
         <Content currentQuote={currentQuote} />
