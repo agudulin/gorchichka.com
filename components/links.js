@@ -8,6 +8,7 @@ const style = `
   .links {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 5rem;
     background-color: ${colors.grey};
     width: 100%;
@@ -32,9 +33,11 @@ const style = `
   }
 `
 
-export default ({ nextQuoteUrl }) => (
+export default ({ nextQuoteUrl, openMenu }) => (
   <div className='links'>
-    <a className='links__item' href='#'><Icon name='hamburger' /></a>
+    <a className='links__item' href='#' onClick={openMenu}>
+      <Icon name='hamburger' />
+    </a>
     <Link href={nextQuoteUrl}>
       <a className='links__item'><Icon name='refresh' /></a>
     </Link>

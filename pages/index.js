@@ -5,8 +5,15 @@ import { getQuote, getQuoteByIndex } from 'gorchichka'
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
 import nextRandomQuote from '../lib/nextRandomQuote'
 import Links from '../components/links'
+import Menu from '../components/menu'
 import Content from '../components/content'
 import * as css from '../stylesheets'
+
+const preventDefault = (fn) => (e) => {
+  e.preventDefault()
+
+  if (typeof fn === 'function') fn(e)
+}
 
 const style = `
   ${css.core}
@@ -19,6 +26,16 @@ const style = `
 `
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      displayMenu: false
+    }
+    this.closeMenu = preventDefault(this.closeMenu.bind(this))
+    this.openMenu = preventDefault(this.openMenu.bind(this))
+  }
+
   static getInitialProps ({ query: { q: id } }) {
     const currentQuote = id
       ? getQuoteByIndex(...indexFromQuery(id), { details: true })
@@ -27,6 +44,14 @@ class App extends Component {
     const nextQuoteIndex = indexFromQuote(nextQuote)
 
     return { currentQuote, nextQuoteIndex }
+  }
+
+  openMenu () {
+    this.setState(state => ({ displayMenu: true }))
+  }
+
+  closeMenu () {
+    this.setState(state => ({ displayMenu: false }))
   }
 
   render () {
@@ -45,7 +70,11 @@ class App extends Component {
         </Head>
 
         <Content currentQuote={currentQuote} />
-        <Links nextQuoteUrl={nextQuoteUrl} />
+        <Links
+          nextQuoteUrl={nextQuoteUrl}
+          openMenu={this.openMenu}
+        />
+        { this.state.displayMenu && <Menu closeMenu={this.closeMenu} /> }
 
         <style>{ style }</style>
       </div>
