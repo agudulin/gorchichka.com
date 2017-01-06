@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Links, LinksItem } from './links'
 import Icon from './icon'
 
 export default ({ closeMenu }) => (
@@ -14,11 +15,9 @@ export default ({ closeMenu }) => (
     <p>
       тут еще какая-то важная информация
     </p>
-    <div className='links'>
-      <a className='links__item' href='' onClick={closeMenu}>
-        <Icon name='close' />
-      </a>
-    </div>
+    <Links>
+      <LinksItem onClick={closeMenu}><Icon name='close' /></LinksItem>
+    </Links>
     <style jsx>{`
       .menu {
         font-family: 'Playfair Display', serif;

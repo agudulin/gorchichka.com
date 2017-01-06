@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
+
 import { getQuote, getQuoteByIndex } from 'gorchichka'
 
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
 import nextRandomQuote from '../lib/nextRandomQuote'
-import Links from '../components/links'
+import Icon from '../components/icon'
+import { Links, LinksItem } from '../components/links'
 import Menu from '../components/menu'
 import Content from '../components/content'
 
@@ -60,10 +62,14 @@ class App extends Component {
         </Head>
 
         <Content currentQuote={currentQuote} />
-        <Links
-          nextQuoteUrl={nextQuoteUrl}
-          openMenu={this.openMenu}
-        />
+        <Links>
+          <LinksItem onClick={this.openMenu}>
+            <Icon name='hamburger' />
+          </LinksItem>
+          <LinksItem href={nextQuoteUrl} prefetch>
+            <Icon name='refresh' />
+          </LinksItem>
+        </Links>
         { this.state.displayMenu && <Menu closeMenu={this.closeMenu} /> }
 
         <style jsx>{`
