@@ -38,6 +38,7 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
         }
         .links__item:hover {
           color: goldenrod;
+          cursor: pointer;
         }
       `}</style>
     </a>
@@ -58,6 +59,7 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
       }
       .links__item:hover {
         color: goldenrod;
+        cursor: pointer;
       }
     `}</style>
   </a>

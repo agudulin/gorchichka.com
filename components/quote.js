@@ -8,7 +8,7 @@ export default ({ quote }) => (
     <style jsx>{`
       .quote {
         font-family: 'Playfair Display', serif;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 1.5;
         order: 2;
         flex-grow: 2;

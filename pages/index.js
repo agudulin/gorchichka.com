@@ -5,8 +5,6 @@ import { getQuote, getQuoteByIndex } from 'gorchichka'
 
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
 import nextRandomQuote from '../lib/nextRandomQuote'
-import Icon from '../components/icon'
-import { Links, LinksItem } from '../components/links'
 import Menu from '../components/menu'
 import Content from '../components/content'
 
@@ -47,6 +45,7 @@ class App extends Component {
 
   render () {
     const { currentQuote, nextQuoteIndex } = this.props
+    const { displayMenu } = this.state
     const title = `горчичка - ${currentQuote.song.title}`
     const nextQuoteUrl = `/?q=${nextQuoteIndex}`
 
@@ -58,19 +57,15 @@ class App extends Component {
           <meta content='initial-scale=1.0, width=device-width' name='viewport' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='black' />
-          <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=cyrillic' />
+          <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=cyrillic' rel='stylesheet' />
         </Head>
 
-        <Content currentQuote={currentQuote} />
-        <Links>
-          <LinksItem onClick={this.openMenu}>
-            <Icon name='hamburger' />
-          </LinksItem>
-          <LinksItem href={nextQuoteUrl} prefetch>
-            <Icon name='refresh' />
-          </LinksItem>
-        </Links>
-        { this.state.displayMenu && <Menu closeMenu={this.closeMenu} /> }
+        <Content
+          currentQuote={currentQuote}
+          nextQuoteUrl={nextQuoteUrl}
+          openMenu={this.openMenu}
+        />
+        { displayMenu && <Menu closeMenu={this.closeMenu} /> }
 
         <style jsx>{`
           .root {

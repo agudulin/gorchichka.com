@@ -1,12 +1,18 @@
 import React from 'react'
 
+import Icon from './icon'
+import { Links, LinksItem } from './links'
 import Quote from './quote'
 import QuoteInfo from './quoteInfo'
 
-export default ({ currentQuote }) => (
+export default ({ currentQuote, nextQuoteUrl, openMenu }) => (
   <div className='content'>
     <QuoteInfo quote={currentQuote} />
     <Quote quote={currentQuote} />
+    <Links>
+      <LinksItem onClick={openMenu}><Icon name='hamburger' /></LinksItem>
+      <LinksItem href={nextQuoteUrl} prefetch><Icon name='refresh' /></LinksItem>
+    </Links>
 
     <style jsx>{`
       .content {
