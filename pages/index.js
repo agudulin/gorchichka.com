@@ -7,23 +7,12 @@ import nextRandomQuote from '../lib/nextRandomQuote'
 import Links from '../components/links'
 import Menu from '../components/menu'
 import Content from '../components/content'
-import * as css from '../stylesheets'
 
 const preventDefault = (fn) => (e) => {
   e.preventDefault()
 
   if (typeof fn === 'function') fn(e)
 }
-
-const style = `
-  ${css.core}
-
-  .root {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-`
 
 class App extends Component {
   constructor (props) {
@@ -65,7 +54,8 @@ class App extends Component {
           <title>{ title }</title>
           <meta charSet='utf-8' />
           <meta content='initial-scale=1.0, width=device-width' name='viewport' />
-          <link href='/static/stylesheets/icomoon.css' rel='stylesheet' />
+          <meta name='apple-mobile-web-app-capable' content='yes' />
+          <meta name='apple-mobile-web-app-status-bar-style' content='black' />
           <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=cyrillic' />
         </Head>
 
@@ -76,7 +66,40 @@ class App extends Component {
         />
         { this.state.displayMenu && <Menu closeMenu={this.closeMenu} /> }
 
-        <style>{ style }</style>
+        <style jsx>{`
+          .root {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+          }
+        `}</style>
+        <style jsx global>{`
+          :root {
+            box-sizing: border-box;
+            height: 100%;
+            font-size: 16px;
+          }
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }
+          :root, body {
+            height: 100%;
+            margin: 0;
+          }
+          body {
+            background-color: black;
+          }
+
+          @font-face {
+            font-family: 'icomoon';
+            src:
+              url('/static/fonts/icomoon.ttf?i1h4ks') format('truetype'),
+              url('/static/fonts/icomoon.woff?i1h4ks') format('woff'),
+              url('/static/fonts/icomoon.svg?i1h4ks#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+          }
+        `}</style>
       </div>
     )
   }
