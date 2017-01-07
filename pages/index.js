@@ -75,6 +75,30 @@ class App extends Component {
           }
         `}</style>
         <style jsx global>{`
+          @font-face {
+            font-family: 'icomoon';
+            src:
+              url('/static/fonts/icomoon.ttf?i1h4ks') format('truetype'),
+              url('/static/fonts/icomoon.woff?i1h4ks') format('woff'),
+              url('/static/fonts/icomoon.svg?i1h4ks#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: 'Gilroy-Light';
+            src:
+              url('/static/fonts/gilroy-light.woff2') format('woff2'),
+              url('/static/fonts/gilroy-light.woff') format('woff'),
+              url('/static/fonts/gilroy-light.ttf') format('truetype');
+          }
+          @font-face {
+            font-family: 'Gilroy-ExtraBold';
+            src:
+              url('/static/fonts/gilroy-bold.woff2') format('woff2'),
+              url('/static/fonts/gilroy-bold.woff') format('woff'),
+              url('/static/fonts/gilroy-bold.ttf') format('truetype');
+          }
+
           :root {
             box-sizing: border-box;
             height: 100%;
@@ -89,16 +113,8 @@ class App extends Component {
           }
           body {
             background-color: black;
-          }
-
-          @font-face {
-            font-family: 'icomoon';
-            src:
-              url('/static/fonts/icomoon.ttf?i1h4ks') format('truetype'),
-              url('/static/fonts/icomoon.woff?i1h4ks') format('woff'),
-              url('/static/fonts/icomoon.svg?i1h4ks#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
+            font-family: 'Gilroy-Light';
+            letter-spacing: 1px;
           }
         `}</style>
       </div>

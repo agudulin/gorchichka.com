@@ -20,7 +20,6 @@ export default ({ closeMenu }) => (
     </Links>
     <style jsx>{`
       .menu {
-        font-family: 'Playfair Display', serif;
         line-height: 1.5;
         width: 100%;
         height: 100%;
@@ -34,7 +33,6 @@ export default ({ closeMenu }) => (
       }
 
       .menu__title {
-        font-family: sans-serif;
         font-size: 2rem;
         margin: 0;
       }
