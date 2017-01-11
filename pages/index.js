@@ -5,14 +5,11 @@ import { getQuote, getQuoteByIndex } from 'gorchichka'
 import Page from '../layouts/main'
 import { indexFromQuery, indexFromQuote } from '../lib/quoteUrl'
 import nextRandomQuote from '../lib/nextRandomQuote'
-import Menu from '../components/menu'
+import preventDefault from '../lib/preventDefault'
 import Content from '../components/content'
-
-const preventDefault = (fn) => (e) => {
-  e.preventDefault()
-
-  if (typeof fn === 'function') fn(e)
-}
+import Icon from '../components/icon'
+import { Links, LinksItem } from '../components/links'
+import Menu from '../components/menu'
 
 class App extends Component {
   constructor (props) {
@@ -51,11 +48,11 @@ class App extends Component {
 
     return (
       <Page title={title}>
-        <Content
-          currentQuote={currentQuote}
-          nextQuoteUrl={nextQuoteUrl}
-          openMenu={this.openMenu}
-        />
+        <Content currentQuote={currentQuote} />
+        <Links>
+          <LinksItem onClick={this.openMenu}><Icon name='hamburger' /></LinksItem>
+          <LinksItem href={nextQuoteUrl} prefetch><Icon name='refresh' /></LinksItem>
+        </Links>
         { displayMenu && <Menu closeMenu={this.closeMenu} /> }
       </Page>
     )
