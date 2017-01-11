@@ -20,12 +20,15 @@ export default ({ quote }) => (
         margin: 0 .5rem;
       }
       .quote-info__album {
+        font-family: 'Gilroy-Light';
         font-size: 1rem;
+        letter-spacing: 1px;
         white-space: nowrap;
       }
       .quote-info__song {
         font-family: 'Gilroy-ExtraBold';
         font-size: 1.5rem;
+        letter-spacing: 1px;
         margin-top: 2rem;
       }
       .quote-info__year {
