@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/prefetch'
 
+import { colors } from '../style'
+
 export const Links = ({ children }) => (
   <div className='links'>
     { children }
@@ -10,7 +12,7 @@ export const Links = ({ children }) => (
         bottom: 0;
         left: 0;
         height: 5rem;
-        background-color: #dcdcdc;
+        background-color: ${colors.grey};
         width: 100%;
         display: flex;
         align-items: center;
@@ -33,11 +35,11 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
           color: black;
           display: flex;
           align-items: center;
-          color: darkgoldenrod;
+          color: ${colors.darkGold};
           transition: color .1s ease;
         }
         .links__item:hover {
-          color: goldenrod;
+          color: ${colors.gold};
           cursor: pointer;
         }
       `}</style>
@@ -51,14 +53,14 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
         padding: 1rem 2rem;
         font-size: 2.5rem;
         text-decoration: none;
-        color: black;
+        color: ${colors.black};
         display: flex;
         align-items: center;
-        color: darkgoldenrod;
+        color: ${colors.darkGold};
         transition: color .1s ease;
       }
       .links__item:hover {
-        color: goldenrod;
+        color: ${colors.gold};
         cursor: pointer;
       }
     `}</style>

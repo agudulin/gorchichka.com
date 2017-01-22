@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { colors } from '../style'
 import savePicture from '../lib/savePicture'
 import preventDefault from '../lib/preventDefault'
 import { Links, LinksItem } from './links'
@@ -29,14 +30,14 @@ export default ({ closeMenu }) => (
         position: absolute;
         top: 0;
         left: 0;
-        background-color: black;
+        background-color: ${colors.black};
         font-size: 1.5rem;
         padding: 2rem;
-        color: #dcdcdc;
+        color: ${colors.grey};
       }
 
       .menu__separator {
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid ${colors.darkGrey};
         width: 3rem;
         margin: 0 auto;
       }
@@ -62,7 +63,7 @@ export default ({ closeMenu }) => (
         width: 100%;
         max-width: 20rem;
         background: transparent;
-        color: #dcdcdc;
+        color: ${colors.grey};
         font-size: 1rem;
         padding: 1rem;
         border-radius: .3rem;

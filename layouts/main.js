@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { colors, font } from '../style'
 
 export default ({ children, title }) => (
   <div className='root'>
@@ -23,7 +24,7 @@ export default ({ children, title }) => (
     `}</style>
     <style jsx global>{`
       @font-face {
-        font-family: 'icomoon';
+        font-family: '${font.family.icon}';
         src:
           url('/static/fonts/icomoon.ttf?i1h4ks') format('truetype'),
           url('/static/fonts/icomoon.woff?i1h4ks') format('woff'),
@@ -32,14 +33,14 @@ export default ({ children, title }) => (
         font-style: normal;
       }
       @font-face {
-        font-family: 'Gilroy-Light';
+        font-family: '${font.family.gilroy}';
         src:
           url('/static/fonts/gilroy-light.woff2') format('woff2'),
           url('/static/fonts/gilroy-light.woff') format('woff'),
           url('/static/fonts/gilroy-light.ttf') format('truetype');
       }
       @font-face {
-        font-family: 'Gilroy-ExtraBold';
+        font-family: '${font.family.gilroyBold}';
         src:
           url('/static/fonts/gilroy-bold.woff2') format('woff2'),
           url('/static/fonts/gilroy-bold.woff') format('woff'),
@@ -49,7 +50,7 @@ export default ({ children, title }) => (
       :root {
         box-sizing: border-box;
         height: 100%;
-        font-size: 16px;
+        font-size: ${font.size.base};
       }
       *, *:before, *:after {
         box-sizing: inherit;
@@ -59,8 +60,8 @@ export default ({ children, title }) => (
         margin: 0;
       }
       body {
-        background-color: black;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        background-color: ${colors.black};
+        font-family: ${font.family.base};
       }
     `}</style>
   </div>

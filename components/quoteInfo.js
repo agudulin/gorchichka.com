@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { font } from '../style'
+
 export default ({ quote }) => (
   <div className='quote-info'>
     <div className='quote-info__album'>
@@ -20,13 +22,13 @@ export default ({ quote }) => (
         margin: 0 .5rem;
       }
       .quote-info__album {
-        font-family: 'Gilroy-Light';
+        font-family: '${font.family.gilroy}';
         font-size: 1rem;
         letter-spacing: 1px;
         white-space: nowrap;
       }
       .quote-info__song {
-        font-family: 'Gilroy-ExtraBold';
+        font-family: '${font.family.gilroyBold}';
         font-size: 1.5rem;
         letter-spacing: 1px;
         margin-top: 2rem;

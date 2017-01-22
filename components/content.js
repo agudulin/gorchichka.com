@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { colors } from '../style'
 import Quote from './quote'
 import QuoteInfo from './quoteInfo'
 
@@ -15,7 +16,7 @@ export default ({ currentQuote }) => (
         display: flex;
         flex-direction: column;
         padding: 2rem 2rem 6rem;
-        color: #dcdcdc;
+        color: ${colors.grey};
       }
     `}</style>
   </div>

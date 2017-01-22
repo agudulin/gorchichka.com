@@ -1,15 +1,17 @@
 import React from 'react'
 
+import { font, icons } from '../style'
+
 export default ({ name }) => (
   <span className={`icon icon--${name}`}>
-    <style jsx>{`
+    <style jsx global>{`
       .icon {
         display: inline-flex;
       }
 
       .icon:before {
-        font-family: 'icomoon';
-        font-family: 'icomoon' !important;
+        font-family: '${font.family.icon}';
+        font-family: '${font.family.icon}' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -22,15 +24,15 @@ export default ({ name }) => (
       }
 
       .icon--close:before {
-        content: '\f00d';
+        content: '${icons.close}';
       }
 
       .icon--refresh:before {
-        content: '\f021';
+        content: '${icons.refresh}';
       }
 
       .icon--hamburger:before {
-        content: '\f0c9';
+        content: '${icons.hamburger}';
       }
     `}</style>
   </span>
