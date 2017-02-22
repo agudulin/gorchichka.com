@@ -11,13 +11,13 @@
   },
   "scripts": {
     "dev": "next",
-    "deploy": "now --alias",
+    "deploy": "now && now alias",
     "lint": "standard",
     "build": "next build",
     "start": "next start"
   },
   "now": {
-    "aliases": ["gorchichka.com", "www.gorchichka.com"]
+    "alias": ["gorchichka.com", "www.gorchichka.com"]
   },
   "devDependencies": {
     "standard": "^9.0.0-beta.0"
