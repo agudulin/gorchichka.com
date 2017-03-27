@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/prefetch'
+import Link from 'next/link'
 
 import { colors } from '../style'
 
@@ -24,7 +24,7 @@ export const Links = ({ children }) => (
 )
 
 export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
-  <Link href={props.href}>
+  <Link href={props.href} prefetch>
     <a className='links__item' {...props}>
       { children }
       <style jsx>{`
