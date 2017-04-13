@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "gorchichka.com",
   "version": "0.0.0",
   "author": "Alexander Gudulin <alexandr.gudulin@gmail.com>",
