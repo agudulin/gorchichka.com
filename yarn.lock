@@ -2553,9 +2553,9 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-gorchichka@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/gorchichka/-/gorchichka-0.3.6.tgz#e20d3eb316c02ba8b8b1703ba9aeb265788d5edc"
+gorchichka@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/gorchichka/-/gorchichka-0.3.7.tgz#65456215a11972ccc9ddc4dabb96c00fd122618d"
   dependencies:
     textr "^0.3.0"
     typographic-base "^1.0.4"
