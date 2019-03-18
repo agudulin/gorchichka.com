@@ -12,7 +12,7 @@ export default ({ closeMenu }) => (
     <p>мы выбрали для вас только самые важные цитаты</p>
     <p>
       дизайнил <a className='menu__link' href='https://vk.com/dan.chaptykov' target='_blank'>даня</a>,
-      кодил <a className='menu__link' href='https://vk.com/agudulin' target='_blank'>саша</a>
+      кодил <a className='menu__link' href='https://gudulin.com' target='_blank'>саша</a>
     </p>
     <div className='menu__separator' />
     <p>
