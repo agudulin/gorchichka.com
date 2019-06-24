@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "alias": "gorchichka.com",
+  "regions": ["all"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "out" }
+    }
+  ]
+}
