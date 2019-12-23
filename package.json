@@ -13,13 +13,17 @@
     "html2canvas": "^1.0.0-rc.5",
     "next": "^9.1.6",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "snyk": "^1.265.0"
   },
   "scripts": {
     "dev": "next dev",
-    "lint": "standard"
+    "lint": "standard",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
     "standard": "^14.3.1"
-  }
+  },
+  "snyk": true
 }

@@ -1,0 +1,107 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - next > webpack > micromatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > braces > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > braces > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > expand-brackets > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > nanomatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > nanomatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > expand-brackets > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > braces > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > nanomatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > nanomatch > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > braces > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > expand-brackets > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > expand-brackets > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > braces > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2019-12-23T13:09:58.573Z'
+  'npm:ms:20170412':
+    - next > webpack > micromatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > braces > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > braces > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > braces > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > fork-ts-checker-webpack-plugin > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > braces > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > braces > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
+    - next > webpack > watchpack > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2019-12-23T13:09:58.573Z'
