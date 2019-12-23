@@ -17,9 +17,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "lint": "standard",
-    "start": "next start",
-    "now-build": "next build && next export"
+    "lint": "standard"
   },
   "devDependencies": {
     "standard": "^14.3.1"
