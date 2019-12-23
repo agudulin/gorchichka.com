@@ -5,7 +5,7 @@ import { colors } from '../style'
 
 export const Links = ({ children }) => (
   <div className='links'>
-    { children }
+    {children}
     <style jsx>{`
       .links {
         position: absolute;
@@ -19,14 +19,15 @@ export const Links = ({ children }) => (
         flex-direction: row;
         justify-content: space-between;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 
 export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
   <Link href={props.href} prefetch>
     <a className='links__item' {...props}>
-      { children }
+      {children}
       <style jsx>{`
         .links__item {
           padding: 1rem 2rem;
@@ -42,12 +43,13 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
           color: ${colors.gold};
           cursor: pointer;
         }
-      `}</style>
+      `}
+      </style>
     </a>
   </Link>
 ) : (
   <a className='links__item' {...props}>
-    { children }
+    {children}
     <style jsx>{`
       .links__item {
         padding: 1rem 2rem;
@@ -63,6 +65,7 @@ export const LinksItem = ({ children, prefetch, ...props }) => prefetch ? (
         color: ${colors.gold};
         cursor: pointer;
       }
-    `}</style>
+    `}
+    </style>
   </a>
 )

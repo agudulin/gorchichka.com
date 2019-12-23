@@ -34,6 +34,7 @@ export default ({ name }) => (
       .icon--hamburger:before {
         content: '${icons.hamburger}';
       }
-    `}</style>
+    `}
+    </style>
   </span>
 )

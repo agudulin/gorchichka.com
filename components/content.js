@@ -18,6 +18,7 @@ export default ({ currentQuote }) => (
         padding: 2rem 2rem 6rem;
         color: ${colors.grey};
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )

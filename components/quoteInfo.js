@@ -7,10 +7,10 @@ export default ({ quote }) => (
     <div className='quote-info__album'>
       Кровосток
       <span className='quote-info__bullet'>•</span>
-      { quote.album.title }
-      <span className='quote-info__year'>{ quote.album.year }</span>
+      {quote.album.title}
+      <span className='quote-info__year'>{quote.album.year}</span>
     </div>
-    <div className='quote-info__song'>{ quote.song.title }</div>
+    <div className='quote-info__song'>{quote.song.title}</div>
 
     <style jsx>{`
       .quote-info {
@@ -37,6 +37,7 @@ export default ({ quote }) => (
         font-size: .8rem;
         margin-left: .5rem;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )

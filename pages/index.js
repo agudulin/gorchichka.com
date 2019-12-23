@@ -18,8 +18,8 @@ class App extends Component {
     this.state = {
       displayMenu: false
     }
-    this.closeMenu = preventDefault(this.closeMenu.bind(this))
-    this.openMenu = preventDefault(this.openMenu.bind(this))
+    this.handleMenuClose = preventDefault(this.handleMenuClose.bind(this))
+    this.handleMenuOpen = preventDefault(this.handleMenuOpen.bind(this))
   }
 
   static getInitialProps ({ query: { q: id } }) {
@@ -32,11 +32,11 @@ class App extends Component {
     return { currentQuote, nextQuoteIndex }
   }
 
-  openMenu () {
+  handleMenuOpen () {
     this.setState(state => ({ displayMenu: true }))
   }
 
-  closeMenu () {
+  handleMenuClose () {
     this.setState(state => ({ displayMenu: false }))
   }
 
@@ -50,10 +50,10 @@ class App extends Component {
       <Page title={title}>
         <Content currentQuote={currentQuote} />
         <Links>
-          <LinksItem onClick={this.openMenu}><Icon name='hamburger' /></LinksItem>
+          <LinksItem onClick={this.handleMenuOpen}><Icon name='hamburger' /></LinksItem>
           <LinksItem href={nextQuoteUrl} prefetch><Icon name='refresh' /></LinksItem>
         </Links>
-        { displayMenu && <Menu closeMenu={this.closeMenu} /> }
+        {displayMenu && <Menu onCloseMenu={this.handleMenuClose} />}
       </Page>
     )
   }
