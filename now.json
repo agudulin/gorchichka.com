@@ -1,6 +1,9 @@
 {
   "version": 2,
-  "alias": "gorchichka.com",
+  "alias": [
+    "gorchichka.com",
+    "www.gorchichka.com"
+  ],
   "regions": ["all"],
   "builds": [
     {
