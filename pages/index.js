@@ -30,7 +30,7 @@ const App = ({ currentQuote, nextQuoteIndex }) => {
   )
 }
 
-App.getInitialProps = ({ query: { q: id } }) => {
+App.getInitialProps = async ({ query: { q: id } }) => {
   const currentQuote = id
     ? getQuoteByIndex(...indexFromQuery(id), { details: true })
     : getQuote({ details: true })
