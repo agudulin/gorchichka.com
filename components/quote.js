@@ -2,11 +2,11 @@ import React from 'react'
 
 import { font } from '../style'
 
-const breakLines = (str) => str.split('\n').map(line => <div key={line}>{ line }</div>)
+const breakLines = (str) => str.split('\n').map(line => <div key={line}>{line}</div>)
 
 export default ({ quote }) => (
   <div className='quote'>
-    { breakLines(quote.quote.title) }
+    {breakLines(quote.quote.title)}
     <style jsx>{`
       .quote {
         font-family: '${font.family.playfair}', serif;

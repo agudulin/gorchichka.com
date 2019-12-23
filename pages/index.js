@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
 import { getQuote, getQuoteByIndex } from 'gorchichka'
 
@@ -11,52 +11,33 @@ import Icon from '../components/icon'
 import { Links, LinksItem } from '../components/links'
 import Menu from '../components/menu'
 
-class App extends Component {
-  constructor (props) {
-    super(props)
+const App = ({ currentQuote, nextQuoteIndex }) => {
+  const [isMenuOpened, setMenuVisibility] = useState(false)
 
-    this.state = {
-      displayMenu: false
-    }
-    this.closeMenu = preventDefault(this.closeMenu.bind(this))
-    this.openMenu = preventDefault(this.openMenu.bind(this))
-  }
+  return (
+    <Page title={`горчичка - ${currentQuote.song.title}`}>
+      <Content currentQuote={currentQuote} />
+      <Links>
+        <LinksItem onClick={() => setMenuVisibility(true)}>
+          <Icon name='hamburger' />
+        </LinksItem>
+        <LinksItem href={`/?q=${nextQuoteIndex}`} prefetch>
+          <Icon name='refresh' />
+        </LinksItem>
+      </Links>
+      {isMenuOpened && <Menu onCloseMenu={() => setMenuVisibility(false)} />}
+    </Page>
+  )
+}
 
-  static getInitialProps ({ query: { q: id } }) {
-    const currentQuote = id
-      ? getQuoteByIndex(...indexFromQuery(id), { details: true })
-      : getQuote({ details: true })
-    const nextQuote = nextRandomQuote(currentQuote)
-    const nextQuoteIndex = indexFromQuote(nextQuote)
+App.getInitialProps = async ({ query: { q: id } }) => {
+  const currentQuote = id
+    ? getQuoteByIndex(...indexFromQuery(id), { details: true })
+    : getQuote({ details: true })
+  const nextQuote = nextRandomQuote(currentQuote)
+  const nextQuoteIndex = indexFromQuote(nextQuote)
 
-    return { currentQuote, nextQuoteIndex }
-  }
-
-  openMenu () {
-    this.setState(state => ({ displayMenu: true }))
-  }
-
-  closeMenu () {
-    this.setState(state => ({ displayMenu: false }))
-  }
-
-  render () {
-    const { currentQuote, nextQuoteIndex } = this.props
-    const { displayMenu } = this.state
-    const title = `горчичка - ${currentQuote.song.title}`
-    const nextQuoteUrl = `/?q=${nextQuoteIndex}`
-
-    return (
-      <Page title={title}>
-        <Content currentQuote={currentQuote} />
-        <Links>
-          <LinksItem onClick={this.openMenu}><Icon name='hamburger' /></LinksItem>
-          <LinksItem href={nextQuoteUrl} prefetch><Icon name='refresh' /></LinksItem>
-        </Links>
-        { displayMenu && <Menu closeMenu={this.closeMenu} /> }
-      </Page>
-    )
-  }
+  return { currentQuote, nextQuoteIndex }
 }
 
 export default App

@@ -6,20 +6,20 @@ import preventDefault from '../lib/preventDefault'
 import { Links, LinksItem } from './links'
 import Icon from './icon'
 
-export default ({ closeMenu }) => (
+export default ({ onCloseMenu }) => (
   <div className='menu'>
     <h1 className='menu__title'>горчичка</h1>
     <p>мы выбрали для вас только самые важные цитаты</p>
     <p>
-      дизайнил <a className='menu__link' href='https://vk.com/dan.chaptykov' target='_blank'>даня</a>,
-      кодил <a className='menu__link' href='https://vk.com/agudulin' target='_blank'>саша</a>
+      дизайнил <a className='menu__link' href='https://vk.com/dan.chaptykov' target='_blank' rel='noopener noreferrer'>даня</a>,
+      кодил <a className='menu__link' href='https://gudulin.com' target='_blank' rel='noopener noreferrer'>саша</a>
     </p>
     <div className='menu__separator' />
     <p>
       <button className='menu__btn' onClick={preventDefault(savePicture)}>сохранить цитату</button>
     </p>
     <Links>
-      <LinksItem onClick={closeMenu}><Icon name='close' /></LinksItem>
+      <LinksItem onClick={onCloseMenu}><Icon name='close' /></LinksItem>
     </Links>
 
     <style jsx>{`
@@ -72,6 +72,7 @@ export default ({ closeMenu }) => (
         text-transform: uppercase;
         margin: 2rem auto 0;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "alias": [
+    "gorchichka.com",
+    "www.gorchichka.com"
+  ],
+  "regions": ["all"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 const icons = {
-  hamburger: `\\f0c9`,
+  hamburger: '\\f0c9',
   refresh: '\\f021',
   close: '\\f00d'
 }

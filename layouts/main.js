@@ -5,7 +5,7 @@ import { colors, font } from '../style'
 export default ({ children, title }) => (
   <div className='root'>
     <Head>
-      <title>{ title }</title>
+      <title>{title}</title>
       <meta charSet='utf-8' />
       <meta content='initial-scale=1.0, width=device-width' name='viewport' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -13,7 +13,7 @@ export default ({ children, title }) => (
       <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=cyrillic' rel='stylesheet' />
     </Head>
 
-    { children }
+    {children}
 
     <style jsx>{`
       .root {
@@ -21,7 +21,8 @@ export default ({ children, title }) => (
         width: 100%;
         position: absolute;
       }
-    `}</style>
+    `}
+    </style>
     <style jsx global>{`
       @font-face {
         font-family: '${font.family.icon}';
@@ -63,6 +64,7 @@ export default ({ children, title }) => (
         background-color: ${colors.black};
         font-family: ${font.family.base};
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
