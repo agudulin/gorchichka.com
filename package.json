@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "author": "Alexander Gudulin <alexandr.gudulin@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "file-saver": "^2.0.2",
     "gorchichka": "^0.3.8",
