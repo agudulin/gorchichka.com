@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "file-saver": "^1.3.3",
-    "gorchichka": "^0.3.7",
+    "gorchichka": "^0.3.8",
     "html2canvas": "^1.0.0-rc.5",
     "next": "^9.1.6",
     "react": "^16.8.6",
