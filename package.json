@@ -19,6 +19,6 @@
     "now-build": "next build && next export"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "standard": "^14.3.1"
   }
 }
